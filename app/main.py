@@ -9,6 +9,8 @@ from app.api.v1.endpoints import article
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 import os
+from alembic.config import Config
+from alembic import command
 
 app = FastAPI()
 
@@ -54,3 +56,8 @@ app.include_router(
 )
 
 
+
+@app.on_event("startup")
+def apply_migrations():
+    alembic_cfg = Config("alembic.ini")
+    command.upgrade(alembic_cfg, "head")
