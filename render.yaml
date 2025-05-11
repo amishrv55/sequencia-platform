@@ -12,7 +12,7 @@ services:
           name: sequencia-db
           property: connectionString
 
-  - type: static
+  - type: static_site
     name: sequencia-ui
     env: static
     plan: free
