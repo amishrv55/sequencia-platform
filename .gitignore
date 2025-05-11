@@ -1,0 +1,24 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+.env
+venv/
+*.db
+
+# === Alembic ===
+/alembic/versions/
+
+# === Node (in case it's mistakenly at root) ===
+/node_modules/
+
+# === VSCode / OS / IDE ===
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === Coverage / Test Artifacts ===
+htmlcov/
+.coverage
+.cache/
