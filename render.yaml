@@ -12,13 +12,12 @@ services:
           name: sequencia-db
           property: connectionString
 
-  - type: static_site
-    name: sequencia-ui
-    env: static
-    plan: free
-    buildCommand: "npm install && npm run build"
-    staticPublishPath: "predictionui/dist"
-
 databases:
   - name: sequencia-db
     plan: free
+
+staticSites:
+  - name: sequencia-ui
+    plan: free
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "predictionui/dist"
