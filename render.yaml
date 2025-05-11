@@ -15,9 +15,3 @@ services:
 databases:
   - name: sequencia-db
     plan: free
-
-staticSites:
-  - name: sequencia-ui
-    plan: free
-    buildCommand: "npm install && npm run build"
-    staticPublishPath: "predictionui/dist"
