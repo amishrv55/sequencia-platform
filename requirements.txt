@@ -8,3 +8,4 @@ pydantic
 python-jose[cryptography]
 passlib[bcrypt]
 email-validator
+pydantic_settings
